@@ -15,5 +15,8 @@ class MainActivity : AppCompatActivity() {
         Timber.i("onCreate called!")
         Timber.i("onCreate called nesto!")
 
+
+        Timber.i("Test istovremenog pusha!")
+
     }
 }
