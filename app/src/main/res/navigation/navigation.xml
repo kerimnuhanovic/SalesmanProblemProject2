@@ -6,5 +6,13 @@
     <fragment
         android:id="@+id/titleFragment2"
         android:name="com.example.salesmanproblemproject.TitleFragment"
-        android:label="TitleFragment" />
+        android:label="TitleFragment" >
+        <action
+            android:id="@+id/action_titleFragment2_to_listaGradovaFragment"
+            app:destination="@id/listaGradovaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaGradovaFragment"
+        android:name="com.example.salesmanproblemproject.ListaGradovaFragment"
+        android:label="ListaGradovaFragment" />
 </navigation>

@@ -8,13 +8,25 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="listaGradovaFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-226" />
+                            <option name="y" value="-88" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="titleFragment2">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-259" />
-                            <option name="y" value="-26" />
+                            <option name="x" value="-481" />
+                            <option name="y" value="-79" />
                           </Point>
                         </option>
                       </LayoutPositions>
