@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
-    var data=listOf<Grad>()
+    var data=listOf<Grad>()//ovdje ce ici lista gradova
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GradViewHolder {
@@ -27,6 +27,7 @@ class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
     override fun getItemCount(): Int {
         return 20
     }
+    //moze se reci da je ova klasa ispod nas jedan item od Recycler viewa
     class GradViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var grad:TextView=itemView.findViewById(R.id.Grad)
         var drzava:TextView=itemView.findViewById(R.id.Drzava)
