@@ -8,8 +8,10 @@
         android:name="com.example.salesmanproblemproject.TitleFragment"
         android:label="TitleFragment" >
         <action
-            android:id="@+id/action_titleFragment2_to_listaGradovaFragment"
-            app:destination="@id/listaGradovaFragment" />
+            android:id="@+id/action_titleFragment2_to_listaGradovaFragment2"
+            app:destination="@id/listaGradovaFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/listaGradovaFragment"
