@@ -33,9 +33,7 @@ class TitleFragment : Fragment() {
             }
         }.start()
 
-        binding.button.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_titleFragment2_to_listaGradovaFragment2)
-        )
+
 
         return binding.root;
     }

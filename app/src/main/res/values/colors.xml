@@ -9,4 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="narandza">#e74c3c</color>
     <color name="siva">#ecf0f1</color>
+    <color name="plava">#3498d8</color>
+
+    <color name="plava_primary">#3498d8</color>
+    <color name="plava_primary_light">#72c9ff</color>
+    <color name="plava_primary_dark">#006aa6</color>
+
+    <color name="plava_secondary">#2c3e50</color>
+    <color name="plava_secondary_light">#57687c</color>
+    <color name="plava_secondary_dark">#031828</color>
 </resources>
