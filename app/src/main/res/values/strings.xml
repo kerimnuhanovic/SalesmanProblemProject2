@@ -5,6 +5,12 @@
     <string name="naslovRecycleView">Lista gradova</string>
     <string name="naziv_grada">Naziv grada:</string>
     <string name="dr_ava">Država:</string>
-    <string name="breakline">--------------------------------------------------------------------------------------------------</string>
     <string name="dodaj_grad">Dodaj grad</string>
+    <string name="lantituda">Lantituda: </string>
+    <string name="longituda">Longituda: </string>
+    <string name="open">Open </string>
+    <string name="close">Close </string>
+    <string name="naziv_drzave">Naziv drzave</string>
+    <string name="naziv_grada_hint">Naziv grada</string>
+
 </resources>

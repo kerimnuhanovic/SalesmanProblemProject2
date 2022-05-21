@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ovo ti je baš bočni meni, Itemi se dodaju kao i u primjeru ispod
+    potrebno je testirati atribut 'actionFragment' ali nisam dodao fragment
+    mada ja sam to testirao na nekom drugom slucaju i radilo je
+    -->
+
+
+    <item
+        android:id="@+id/item1"
+        android:title="Računaj salesman problem"
+
+        />
+
+
+
+
+</menu>

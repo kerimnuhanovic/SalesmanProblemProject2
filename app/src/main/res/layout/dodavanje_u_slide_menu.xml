@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ovdje se nalaze oni Text Viewi u bocnom meniju
+To je ono gdje smo rekli da cemo dodavati grad. Dodana je jedna formica
+Kreiran je i toggle button ali mislim da se on nece vidjeti dok ne dodamo menu gore-->
+
+<!-- Ovdje mislim da cemo morati dodati fragment na ovo da okine akciju dodavanja grada-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/white"
+    >
+    <EditText
+        android:id="@+id/dodajNazivGrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginStart="10dp"
+        android:inputType="textPersonName"
+        android:hint="@string/naziv_grada_hint"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/dodajNazivDrzave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dodajNazivGrada"
+        android:inputType="textPersonName"
+        android:hint="@string/naziv_drzave"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/dodajLantitudu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintTop_toBottomOf="@id/dodajNazivDrzave"
+        android:hint="@string/lantituda"
+        android:inputType="textPersonName"
+        tools:ignore="MissingConstraints"
+         />
+
+    <EditText
+        android:id="@+id/dodajLongitudu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dodajLantitudu"
+        android:ems="10"
+        android:hint="@string/longituda"
+        android:inputType="textPersonName"
+        tools:ignore="MissingConstraints"
+      />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+
+        android:layout_marginTop="4dp"
+        android:text="@string/dodaj_grad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dodajLongitudu"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
