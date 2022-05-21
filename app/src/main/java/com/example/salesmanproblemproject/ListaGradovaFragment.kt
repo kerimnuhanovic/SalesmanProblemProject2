@@ -40,7 +40,8 @@ class ListaGradovaFragment : Fragment() {
         val grad_adapter=GradAdapter()
         val recyclerView: RecyclerView=binding.recycleGradovi
         recyclerView.adapter=grad_adapter//kraj postavljanja recycler Viewa
-
+        //dodavanje menua
+        setHasOptionsMenu(true)
         gradViewModel = ViewModelProvider(this).get(GradDBViewModel::class.java)
 
         gradViewModel.readAllData.observe(viewLifecycleOwner, Observer {grad->
