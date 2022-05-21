@@ -15,7 +15,7 @@ interface GradDBDao {
     fun get(key: Long):GradDB
 
     @Query("delete from grad_table")
-    fun clear()
+    suspend fun deleteAll()
 
     @Query("select * from grad_table")
     fun getAllCities() : LiveData<List<GradDB>>

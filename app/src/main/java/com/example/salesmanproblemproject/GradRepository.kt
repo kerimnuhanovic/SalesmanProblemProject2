@@ -13,4 +13,8 @@ class GradRepository(private val gradDao: GradDBDao) {
         gradDao.insert(grad)
     }
 
+    suspend fun deleteAll() {
+        gradDao.deleteAll()
+    }
+
 }

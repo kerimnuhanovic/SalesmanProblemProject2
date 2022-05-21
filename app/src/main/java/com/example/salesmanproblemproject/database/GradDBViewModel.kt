@@ -24,4 +24,11 @@ public class GradDBViewModel(application: Application): AndroidViewModel(applica
             repository.addGrad(grad)
         }
     }
+
+    fun deleteAll() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAll()
+        }
+    }
+
 }

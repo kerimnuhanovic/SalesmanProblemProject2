@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.226" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_dodaj_grad.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_lista_gradova.xml" value="0.25416666666666665" />
