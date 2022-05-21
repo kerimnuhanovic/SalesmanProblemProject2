@@ -6,7 +6,7 @@
     <fragment
         android:id="@+id/titleFragment2"
         android:name="com.example.salesmanproblemproject.TitleFragment"
-        android:label="TitleFragment" >
+        android:label="Najkraci put app" >
         <action
             android:id="@+id/action_titleFragment2_to_listaGradovaFragment2"
             app:destination="@id/listaGradovaFragment"
@@ -16,5 +16,17 @@
     <fragment
         android:id="@+id/listaGradovaFragment"
         android:name="com.example.salesmanproblemproject.ListaGradovaFragment"
-        android:label="ListaGradovaFragment" />
+        android:label="Lista gradova" >
+        <action
+            android:id="@+id/action_listaGradovaFragment_to_dodajGradFragment"
+            app:destination="@id/dodajGradFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dodajGradFragment"
+        android:name="com.example.salesmanproblemproject.DodajGradFragment"
+        android:label="Dodaj grad" >
+        <action
+            android:id="@+id/action_dodajGradFragment_to_listaGradovaFragment"
+            app:destination="@id/listaGradovaFragment" />
+    </fragment>
 </navigation>

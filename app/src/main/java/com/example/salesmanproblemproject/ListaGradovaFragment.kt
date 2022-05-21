@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.example.salesmanproblemproject.database.GradDBViewModel
 import com.example.salesmanproblemproject.databinding.FragmentListaGradovaBinding
 import com.example.salesmanproblemproject.databinding.FragmentTitleBinding
 
@@ -17,6 +21,7 @@ import com.example.salesmanproblemproject.databinding.FragmentTitleBinding
  */
 class ListaGradovaFragment : Fragment() {
 
+    private lateinit var gradViewModel: GradDBViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +35,16 @@ class ListaGradovaFragment : Fragment() {
         val recyclerView: RecyclerView=binding.recycleGradovi
         recyclerView.adapter=grad_adapter//kraj postavljanja recycler Viewa
 
+        /*dodat liniju koda ako zatreba*/
+        gradViewModel = ViewModelProvider(this).get(GradDBViewModel::class.java)
+
+        gradViewModel.readAllData.observe(viewLifecycleOwner, Observer {grad->
+            grad_adapter.setGradovi(grad)
+        })
+
+        binding.floatingActionButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_listaGradovaFragment_to_dodajGradFragment)
+        )
         return binding.root;
     }
 

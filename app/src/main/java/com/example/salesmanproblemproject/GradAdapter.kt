@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.salesmanproblemproject.database.GradDB
 
 class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
-    var data=listOf<Grad>()//ovdje ce ici lista gradova
+
+    private var listaGradova = emptyList<GradDB>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GradViewHolder {
@@ -19,18 +21,31 @@ class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: GradViewHolder, position: Int) {
-        holder.grad.text="Sarajevo"
-        holder.drzava.text="Sarajevo"
+        val trenutniGrad = listaGradova[position]
+
+        holder.grad.text= trenutniGrad.grad
+        holder.drzava.text=trenutniGrad.drzava
+        holder.latituda.text = trenutniGrad.latituda.toString()
+        holder.longituda.text = trenutniGrad.longituda.toString()
 
     }
 
     override fun getItemCount(): Int {
-        return 20
+        return listaGradova.size
     }
     //moze se reci da je ova klasa ispod nas jedan item od Recycler viewa
     class GradViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var grad:TextView=itemView.findViewById(R.id.Grad)
-        var drzava:TextView=itemView.findViewById(R.id.Drzava)
+        var drzava:TextView=itemView.findViewById(R.id.Drzava)/**/
+        var latituda:TextView = itemView.findViewById(R.id.latituda)
+
+        var longituda:TextView = itemView.findViewById(R.id.longituda)
 
     }
+
+    fun setGradovi(gradovi: List<GradDB>) {
+        this.listaGradova = gradovi
+        notifyDataSetChanged()
+    }
+
 }
