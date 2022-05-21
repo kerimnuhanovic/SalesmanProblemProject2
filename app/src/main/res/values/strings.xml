@@ -8,4 +8,8 @@
     <string name="breakline">--------------------------------------------------------------------------------------------------</string>
     <string name="dodaj_grad">Dodaj grad</string>
     <string name="grad">Grad:</string>
+    <string name="longituda">Longituda</string>
+    <string name="lantituda">Longituda</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

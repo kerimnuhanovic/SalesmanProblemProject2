@@ -4,57 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/plava"
-    android:padding="24dp">
+    android:layout_marginTop="10dp"
+    android:background="@color/plava">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/naziv_grada"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/dr_ava"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/Grad"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Mostar"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"/>
 
-        />
     <TextView
         android:id="@+id/Drzava"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Bosna i Hercegovina"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/Grad"
-        android:textSize="16dp"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="8dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/Grad"
+        android:textColor="@color/white"/>
+
     <TextView
-        android:id="@+id/latituda"
+        android:id="@+id/textView4"
+        android:layout_width="68dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/lantituda"
+        app:layout_constraintStart_toEndOf="@+id/Grad"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="latituda"
-        android:textColor="@color/white"
+        android:layout_marginStart="5dp"
+        android:text="@string/longituda"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/Grad"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/lantituda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:textColor="@color/white"/>
+
     <TextView
         android:id="@+id/longituda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Longituda"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@id/lantituda"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/latituda"/>
+        />
 
-    <!--
-    <TextView
-        android:id="@+id/breakline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/breakline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:background="@color/white"/>-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

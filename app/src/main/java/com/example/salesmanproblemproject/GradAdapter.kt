@@ -28,6 +28,7 @@ class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
         holder.latituda.text = trenutniGrad.latituda.toString()
         holder.longituda.text = trenutniGrad.longituda.toString()
 
+
     }
 
     override fun getItemCount(): Int {
@@ -37,7 +38,7 @@ class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
     class GradViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var grad:TextView=itemView.findViewById(R.id.Grad)
         var drzava:TextView=itemView.findViewById(R.id.Drzava)/**/
-        var latituda:TextView = itemView.findViewById(R.id.latituda)
+        var latituda:TextView = itemView.findViewById(R.id.lantituda)
 
         var longituda:TextView = itemView.findViewById(R.id.longituda)
 
