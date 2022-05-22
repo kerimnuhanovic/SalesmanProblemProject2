@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_listaGradovaFragment_to_dodajGradFragment"
             app:destination="@id/dodajGradFragment" />
+        <action
+            android:id="@+id/action_listaGradovaFragment_to_gradDetaljiFragment"
+            app:destination="@id/gradDetaljiFragment" />
     </fragment>
     <fragment
         android:id="@+id/dodajGradFragment"
@@ -29,4 +32,19 @@
             android:id="@+id/action_dodajGradFragment_to_listaGradovaFragment"
             app:destination="@id/listaGradovaFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/gradDetaljiFragment"
+        android:name="com.example.salesmanproblemproject.GradDetaljiFragment"
+        android:label="GradDetaljiFragment" >
+        <argument
+            android:name="grad"
+            app:argType="com.example.salesmanproblemproject.database.GradDB" />
+        <action
+            android:id="@+id/action_gradDetaljiFragment_to_listaGradovaFragment"
+            app:destination="@id/listaGradovaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/najkraciPutFragment"
+        android:name="com.example.salesmanproblemproject.NajkraciPutFragment"
+        android:label="NajkraciPutFragment" />
 </navigation>

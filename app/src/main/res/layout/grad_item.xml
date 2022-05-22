@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/plava"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:id="@+id/okvirReda">
 
     <TextView
         android:id="@+id/Grad"

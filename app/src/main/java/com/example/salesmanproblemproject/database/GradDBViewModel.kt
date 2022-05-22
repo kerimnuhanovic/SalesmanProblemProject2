@@ -31,4 +31,14 @@ public class GradDBViewModel(application: Application): AndroidViewModel(applica
         }
     }
 
+    fun deleteCity(grad:GradDB) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteCity(grad)
+        }
+    }
+
+    suspend fun dajSve():List<GradDB> {
+        return repository.dajSve()
+    }
+
 }

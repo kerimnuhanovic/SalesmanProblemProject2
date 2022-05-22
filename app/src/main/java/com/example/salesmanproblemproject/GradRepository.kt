@@ -17,4 +17,12 @@ class GradRepository(private val gradDao: GradDBDao) {
         gradDao.deleteAll()
     }
 
+    suspend fun deleteCity(grad: GradDB) {
+        gradDao.deleteCity(grad)
+    }
+
+    suspend fun dajSve():List<GradDB> {
+        return gradDao.dajSve()
+    }
+
 }

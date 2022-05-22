@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.salesmanproblemproject.database.GradDB
 
@@ -27,7 +29,9 @@ class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
         holder.drzava.text=trenutniGrad.drzava
         holder.latituda.text = trenutniGrad.latituda.toString()
         holder.longituda.text = trenutniGrad.longituda.toString()
-
+        holder.okvir.setOnClickListener {
+            it.findNavController().navigate(ListaGradovaFragmentDirections.actionListaGradovaFragmentToGradDetaljiFragment(trenutniGrad))
+        }
     }
 
     override fun getItemCount(): Int {
@@ -40,6 +44,8 @@ class GradAdapter: RecyclerView.Adapter<GradAdapter.GradViewHolder>() {
         var latituda:TextView = itemView.findViewById(R.id.latituda)
 
         var longituda:TextView = itemView.findViewById(R.id.longituda)
+
+        var okvir: View = itemView.findViewById(R.id.okvirReda)
 
     }
 

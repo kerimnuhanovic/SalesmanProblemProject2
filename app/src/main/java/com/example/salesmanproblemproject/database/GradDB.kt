@@ -1,9 +1,12 @@
 package com.example.salesmanproblemproject.database
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "grad_table")
 data class GradDB(
     @PrimaryKey(autoGenerate = true)
@@ -17,4 +20,4 @@ data class GradDB(
     @ColumnInfo(name = "latituda")
     var latituda: Double,
     @ColumnInfo(name = "longituda")
-    var longituda: Double)
+    var longituda: Double): Parcelable
