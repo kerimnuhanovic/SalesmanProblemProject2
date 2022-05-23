@@ -14,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
@@ -57,6 +58,16 @@ class ListaGradovaFragment : Fragment() {
             grad_adapter.setGradovi(grad)
         })//u fragment
 
+        navView.bringToFront();
+
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.item1-> navView.findNavController().navigate(R.id.action_listaGradovaFragment_to_OAplikaciji)
+            }
+            true
+        }
+
+
         binding.floatingActionButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_listaGradovaFragment_to_dodajGradFragment)
         )
@@ -75,7 +86,21 @@ class ListaGradovaFragment : Fragment() {
             builder.show()
         }
         ///////////pocetak za bocni meni
+        binding.dugme.setOnClickListener {
+            var listaPomocna: ListaGradova = ListaGradova(gradViewModel.readAllData.value!!)
+            if (gradViewModel.readAllData.value!!.size == 0 || gradViewModel.readAllData.value!!.size == 1 ||
+                gradViewModel.readAllData.value!!.size == 2
+            ) {
+                Toast.makeText(requireContext(), "Potrebna su barem tri grada za računanje puta!", Toast.LENGTH_LONG).show()
+            } else {
+                it.findNavController().navigate(
+                    ListaGradovaFragmentDirections.actionListaGradovaFragmentToNajkraciPutFragment(
+                        listaPomocna
+                    )
+                )
 
+            }
+        }
 
         return binding.root;
     }

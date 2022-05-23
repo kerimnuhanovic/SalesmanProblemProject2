@@ -28,7 +28,7 @@ class PrikazGrada : Fragment() {
          */
         val args=PrikazGradaArgs.fromBundle(requireArguments())
         val grad = LatLng(args.lat.toDouble(), args.lon.toDouble())
-        googleMap.addMarker(MarkerOptions().position(grad).title("Marker in Sydney"))
+        googleMap.addMarker(MarkerOptions().position(grad).title("Nas grad"))
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(grad))
     }
 

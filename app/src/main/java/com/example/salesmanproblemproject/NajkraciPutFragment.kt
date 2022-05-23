@@ -10,6 +10,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.findNavController
 import com.example.salesmanproblemproject.algoritam.Algoritam
 import com.example.salesmanproblemproject.database.GradDB
 import com.example.salesmanproblemproject.database.GradDBViewModel
@@ -37,10 +38,21 @@ class NajkraciPutFragment : Fragment() {
             algoritam.najkraciPut.observe(viewLifecycleOwner, Observer { put ->
             var putString = ""
             for(i in 0..put.size-1) {
-                putString += put[i].grad
+                if (i != put.size-1)
+                    putString += put[i].grad + " - "
+                else putString += put[i].grad
             }
             binding.put.text = putString
         })
+
+        algoritam.algoritamZavrsen.observe(viewLifecycleOwner, Observer { nova ->
+            binding.prikaziPutNaKarti.isClickable = true
+        })
+
+        binding.prikaziPutNaKarti.setOnClickListener {
+            var l = ListaGradova(algoritam.najkraciPut.value!!)
+            it.findNavController().navigate(NajkraciPutFragmentDirections.actionNajkraciPutFragmentToPrikaziPut(l))
+        }
 
         binding.racunaj.setOnClickListener {
             algoritam.najkraciPutFunkcija()

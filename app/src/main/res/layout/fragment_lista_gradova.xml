@@ -51,6 +51,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="10dp"
             />
 
 
@@ -79,6 +80,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        <Button
+            android:id="@+id/dugme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Najkraći put"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+            app:layout_constraintStart_toEndOf="@+id/izbrisiSve" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

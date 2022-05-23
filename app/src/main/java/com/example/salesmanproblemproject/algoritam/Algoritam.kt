@@ -18,20 +18,27 @@ class Algoritam(var lista: List<GradDB>){
 
     var najkraciPut = MutableLiveData<List<GradDB>>()
 
+    private val __algoritamZavrsen = MutableLiveData<Boolean>()
+    val algoritamZavrsen: LiveData<Boolean>
+        get() = __algoritamZavrsen
     init {
        __minimalanPut.value = MAX_VALUE
         pocetniGrad = lista[0]
+        __algoritamZavrsen.value = false
     }
 
     fun najkraciPutFunkcija() {
+
         var l = lista.toMutableList()
         l.removeFirst()
 
         permutacije(l)
+        __algoritamZavrsen.value = true
 
     }
 
     private fun permutacije(lista : MutableList<GradDB>):MutableList<MutableList<GradDB>> {
+
         var rezultat = mutableListOf<MutableList<GradDB>>()
         if (lista.size == 1) {
             var listaPomocna: MutableList<MutableList<GradDB>> = mutableListOf(mutableListOf(lista[0]))
@@ -41,6 +48,7 @@ class Algoritam(var lista: List<GradDB>){
         for(i in 0..lista.size-1) {
             var prvi = lista.removeFirst()
             var perm = permutacije(lista)
+
 
             for(j in 0..perm.size-1)
                 perm[j].add(prvi)

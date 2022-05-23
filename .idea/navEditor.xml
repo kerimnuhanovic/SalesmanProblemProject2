@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="OAplikaciji">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-17" />
+                            <option name="y" value="-414" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="dodajGradFragment">
                     <value>
                       <LayoutPositions>
@@ -41,6 +53,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_gradDetaljiFragment_to_listaGradovaFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_gradDetaljiFragment_to_prikazGrada">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -90,6 +107,15 @@
                             <option name="y" value="272" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_najkraciPutFragment_to_prikaziPut">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -100,6 +126,18 @@
                           <Point>
                             <option name="x" value="118" />
                             <option name="y" value="249" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="prikaziPut">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-267" />
+                            <option name="y" value="585" />
                           </Point>
                         </option>
                       </LayoutPositions>

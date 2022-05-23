@@ -12,4 +12,11 @@
     <string name="lantituda">Longituda</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="about">Aplikacija „Trgovački putnik“ je napisana u progrmskom jeziku Kotlin.
+        Aplikacija sadrži dijelove u kojima možete dodavati gradove sa latitudama i lognitudama.
+        Takođe omogućava i ispis najkraćeg puta od početnog grada(grada koji je prvi dodan) i ostalih gradova.
+        Takođe omogućava prikaz dodatih informacija o gradu, te prikaz grada na mapi.
+        Nakon izračunavanja najkraćeg puta takođe je moguće i prikazati taj put na mapi.</string>
+    <string name="radili">Radili: Kerim Nuhanović i Purak Muhamed\nProfesor: prof. dr. Elmedin Selmanović</string>
+    <string name="o_aplikaciji">O aplikaciji</string>
 </resources>

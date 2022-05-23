@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/plava"
+    android:background="@color/plava_secondary_light"
     android:padding="24dp"
-    android:id="@+id/okvirReda">
+    android:id="@+id/okvirReda"
+    android:layout_marginBottom="10dp">
 
     <TextView
         android:id="@+id/Grad"
@@ -30,22 +31,25 @@
         android:gravity="center_vertical"
         android:layout_marginLeft="8dp"
         tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/latituda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="latituda"
         android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/Grad"
+        app:layout_constraintStart_toStartOf="parent"/>
     <TextView
         android:id="@+id/longituda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Longituda"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/latituda"/>
+        app:layout_constraintTop_toBottomOf="@+id/latituda"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
 
     <!--
     <TextView
