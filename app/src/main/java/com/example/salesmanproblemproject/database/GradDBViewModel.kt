@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.salesmanproblemproject.GradRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 public class GradDBViewModel(application: Application): AndroidViewModel(application) {
@@ -37,8 +39,13 @@ public class GradDBViewModel(application: Application): AndroidViewModel(applica
         }
     }
 
-    suspend fun dajSve():List<GradDB> {
-        return repository.dajSve()
+    fun dajSveGradove():List<GradDB> {
+        return repository.dajSveGradove()
+    }
+
+    private suspend fun pomocna():List<GradDB> {
+        delay(3000)
+        return repository.dajSveGradove()
     }
 
 }

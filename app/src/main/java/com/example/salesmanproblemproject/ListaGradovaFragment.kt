@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.salesmanproblemproject.database.GradDBViewModel
 import com.example.salesmanproblemproject.databinding.FragmentListaGradovaBinding
@@ -60,6 +61,12 @@ class ListaGradovaFragment : Fragment() {
             builder.setTitle("Izbrisi")
             builder.setMessage("Da li želite izbrisati sve gradove?")
             builder.show()
+        }
+
+
+        binding.dugme.setOnClickListener {
+            var listaPomocna: ListaGradova = ListaGradova(gradViewModel.readAllData.value!!)
+            it.findNavController().navigate(ListaGradovaFragmentDirections.actionListaGradovaFragmentToNajkraciPutFragment(listaPomocna))
         }
 
         return binding.root;

@@ -26,6 +26,6 @@ interface GradDBDao {
     fun getAllCities() : LiveData<List<GradDB>>
 
     @Query("select * from grad_table")
-    fun dajSve() : List<GradDB>
+    fun dajSveGradove() : List<GradDB>
 
 }

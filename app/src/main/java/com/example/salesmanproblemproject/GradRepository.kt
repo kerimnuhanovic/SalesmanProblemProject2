@@ -21,8 +21,8 @@ class GradRepository(private val gradDao: GradDBDao) {
         gradDao.deleteCity(grad)
     }
 
-    suspend fun dajSve():List<GradDB> {
-        return gradDao.dajSve()
+    fun dajSveGradove():List<GradDB> {
+        return gradDao.dajSveGradove()
     }
 
 }

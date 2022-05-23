@@ -1,42 +1,35 @@
 package com.example.salesmanproblemproject.algoritam
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.example.salesmanproblemproject.Grad
 import com.example.salesmanproblemproject.database.GradDB
+import timber.log.Timber
 
 import kotlin.Double.Companion.MAX_VALUE
 
-class Algoritam(var lista: List<GradDB>) {
+class Algoritam(var lista: List<GradDB>){
 
+    lateinit var pocetniGrad: GradDB
+    private var __minimalanPut = MutableLiveData<Double>()
+    val minimalanPut: LiveData<Double>
+        get() = __minimalanPut
 
+    var najkraciPut = MutableLiveData<List<GradDB>>()
 
-    fun najkraciPut(): MutableList<GradDB> {
-        var pomocna = lista.toMutableList()
-        var pocetniGrad = lista[0]
-        pomocna.removeFirst()
-        var permutacije = permutacije(pomocna)
-        var minimalanPut = MAX_VALUE
-        var rezultat = mutableListOf<GradDB>()
-        for(i in 0..permutacije.size-1) {
-            var trenutniPut = udaljenost(pocetniGrad.latituda,pocetniGrad.longituda,permutacije[i][0].latituda,
-            permutacije[i][0].longituda)
-            for(j in 0..permutacije[i].size-2) {
-                trenutniPut += udaljenost(permutacije[i][j].latituda,permutacije[i][j].longituda,
-                permutacije[i][j+1].latituda,permutacije[i][j+1].longituda)
-            }
-            trenutniPut += udaljenost(permutacije[i][permutacije[i].size-1].latituda,
-                permutacije[i][permutacije[i].size-1].longituda,pocetniGrad.latituda,pocetniGrad.longituda)
-
-            if(trenutniPut < minimalanPut) {
-                minimalanPut = trenutniPut
-                var pomocna = permutacije[i]
-                pomocna.add(0,pocetniGrad)
-                rezultat = pomocna
-            }
-
-        }
-
-        return rezultat
+    init {
+       __minimalanPut.value = MAX_VALUE
+        pocetniGrad = lista[0]
     }
 
+    fun najkraciPutFunkcija() {
+        var l = lista.toMutableList()
+        l.removeFirst()
+
+        permutacije(l)
+
+    }
 
     private fun permutacije(lista : MutableList<GradDB>):MutableList<MutableList<GradDB>> {
         var rezultat = mutableListOf<MutableList<GradDB>>()
@@ -51,7 +44,27 @@ class Algoritam(var lista: List<GradDB>) {
 
             for(j in 0..perm.size-1)
                 perm[j].add(prvi)
+            /*Ubacit ptovjeru da li je duzina niza jednaka*/
+            if(perm[0].size == this.lista.size.minus(1)) {
+                for(j in 0..perm.size-1) {
+                    var trenutniPut = udaljenost(pocetniGrad.latituda,pocetniGrad.longituda,perm[j][0].latituda,
+                        perm[j][0].longituda)
+                    for(k in 0..perm[j].size-2) {
+                        trenutniPut += udaljenost(perm[j][k].latituda,perm[j][k].longituda,
+                            perm[j][k+1].latituda,perm[j][k+1].longituda)
+                    }
+                    trenutniPut += udaljenost(perm[j][perm[j].size-1].latituda,
+                        perm[j][perm[j].size-1].longituda,pocetniGrad.latituda,pocetniGrad.longituda)
+                    if(trenutniPut < __minimalanPut.value!!) {
+                        __minimalanPut.value = trenutniPut
+                        var pomocna = perm[j]
+                        pomocna.add(0,pocetniGrad!!)
+                        najkraciPut.value = pomocna
+                    }
 
+                }
+
+            }
             rezultat = rezultat.plus(perm).toMutableList()/*Provjerit da li merga dobro*/
             lista.add(prvi)
         }

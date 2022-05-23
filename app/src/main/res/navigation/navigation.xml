@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_listaGradovaFragment_to_gradDetaljiFragment"
             app:destination="@id/gradDetaljiFragment" />
+        <action
+            android:id="@+id/action_listaGradovaFragment_to_najkraciPutFragment"
+            app:destination="@id/najkraciPutFragment" />
     </fragment>
     <fragment
         android:id="@+id/dodajGradFragment"
@@ -46,5 +49,9 @@
     <fragment
         android:id="@+id/najkraciPutFragment"
         android:name="com.example.salesmanproblemproject.NajkraciPutFragment"
-        android:label="NajkraciPutFragment" />
+        android:label="NajkraciPutFragment" >
+        <argument
+            android:name="niz"
+            app:argType="com.example.salesmanproblemproject.ListaGradova" />
+    </fragment>
 </navigation>
