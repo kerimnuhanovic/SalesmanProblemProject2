@@ -46,7 +46,9 @@ class GradDetaljiFragment : Fragment() {
             alert.setMessage("Želite li izbrisati grad ${args.grad.grad}")
             alert.create().show()
         }
-
+        binding.mapaDugme.setOnClickListener {
+            it.findNavController().navigate(GradDetaljiFragmentDirections.actionGradDetaljiFragmentToPrikazGrada(args.grad.latituda.toString(),args.grad.longituda.toString()))
+        }
         return binding.root
     }
 }

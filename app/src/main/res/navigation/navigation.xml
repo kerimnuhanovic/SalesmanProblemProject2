@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/titleFragment2">
     <fragment
@@ -45,6 +46,9 @@
         <action
             android:id="@+id/action_gradDetaljiFragment_to_listaGradovaFragment"
             app:destination="@id/listaGradovaFragment" />
+        <action
+            android:id="@+id/action_gradDetaljiFragment_to_prikazGrada"
+            app:destination="@id/prikazGrada" />
     </fragment>
     <fragment
         android:id="@+id/najkraciPutFragment"
@@ -53,5 +57,16 @@
         <argument
             android:name="niz"
             app:argType="com.example.salesmanproblemproject.ListaGradova" />
+    </fragment>
+    <fragment
+        android:id="@+id/prikazGrada"
+        android:name="com.example.salesmanproblemproject.PrikazGrada"
+        android:label="fragment_prikaz_grada"
+        tools:layout="@layout/fragment_prikaz_grada" >
+        <argument
+            android:name="lat"
+            app:argType="string" />
+        <argument android:name="lon"
+            app:argType="string" />
     </fragment>
 </navigation>

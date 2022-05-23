@@ -71,6 +71,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_listaGradovaFragment_to_najkraciPutFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -83,6 +88,18 @@
                           <Point>
                             <option name="x" value="-446" />
                             <option name="y" value="272" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="prikazGrada">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="118" />
+                            <option name="y" value="249" />
                           </Point>
                         </option>
                       </LayoutPositions>
