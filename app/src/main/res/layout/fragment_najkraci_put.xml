@@ -7,28 +7,54 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/naslov"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Najkraći put"
+            android:textAlignment="center"
+            android:textColor="@color/plava_primary"
+            android:textSize="24sp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"/>
 
         <Button
             android:id="@+id/racunaj"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Racunaj"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Računaj"
+            app:layout_constraintTop_toBottomOf="@+id/put"
             android:layout_marginTop="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             />
 
         <TextView
             android:id="@+id/put"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/racunaj"
-            app:layout_constraintStart_toStartOf="parent"
             android:text="Put"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
             android:textSize="16dp"
-            android:layout_marginTop="16dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/naslov"
+            android:layout_marginTop="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/prikaziPutNaKarti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_baseline_map_24" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

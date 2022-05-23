@@ -20,8 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration
             .Builder(
-                R.id.titleFragment2,
-                R.id.listaGradovaFragment
+                R.id.titleFragment2
 
             )
             .build()
