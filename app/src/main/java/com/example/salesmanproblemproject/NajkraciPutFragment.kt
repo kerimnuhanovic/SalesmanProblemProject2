@@ -30,7 +30,7 @@ class NajkraciPutFragment : Fragment() {
     ): View? {
         val binding: FragmentNajkraciPutBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_najkraci_put, container,false)
 
-        var args = NajkraciPutFragmentArgs.fromBundle(arguments!!)
+        var args = NajkraciPutFragmentArgs.fromBundle(requireArguments())
         var algoritam = Algoritam(args.niz.lista)
 
 

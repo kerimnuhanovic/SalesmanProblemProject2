@@ -66,9 +66,19 @@ class ListaGradovaFragment : Fragment() {
 
         binding.dugme.setOnClickListener {
             var listaPomocna: ListaGradova = ListaGradova(gradViewModel.readAllData.value!!)
-            it.findNavController().navigate(ListaGradovaFragmentDirections.actionListaGradovaFragmentToNajkraciPutFragment(listaPomocna))
-        }
+            if (gradViewModel.readAllData.value!!.size == 0 || gradViewModel.readAllData.value!!.size == 1 ||
+                gradViewModel.readAllData.value!!.size == 2
+            ) {
+                Toast.makeText(requireContext(), "Potrebna su barem tri grada za računanje puta!", Toast.LENGTH_LONG).show()
+            } else {
+                it.findNavController().navigate(
+                    ListaGradovaFragmentDirections.actionListaGradovaFragmentToNajkraciPutFragment(
+                        listaPomocna
+                    )
+                )
 
+            }
+        }
         return binding.root;
     }
 
