@@ -2,10 +2,7 @@ package com.example.salesmanproblemproject.algoritam
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.salesmanproblemproject.Grad
 import com.example.salesmanproblemproject.database.GradDB
-import timber.log.Timber
 
 import kotlin.Double.Companion.MAX_VALUE
 

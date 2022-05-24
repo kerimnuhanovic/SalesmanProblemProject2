@@ -42,10 +42,10 @@ public class GradDBViewModel(application: Application): AndroidViewModel(applica
     fun dajSveGradove():List<GradDB> {
         return repository.dajSveGradove()
     }
-
+/*
     private suspend fun pomocna():List<GradDB> {
         delay(3000)
         return repository.dajSveGradove()
     }
-
+*/
 }

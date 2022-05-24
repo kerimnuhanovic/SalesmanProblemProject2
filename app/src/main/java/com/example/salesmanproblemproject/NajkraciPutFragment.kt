@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -50,10 +51,20 @@ class NajkraciPutFragment : Fragment() {
         })
 
         binding.prikaziPutNaKarti.setOnClickListener {
-            var l = ListaGradova(algoritam.najkraciPut.value!!)
-            it.findNavController().navigate(NajkraciPutFragmentDirections.actionNajkraciPutFragmentToPrikaziPut(l))
-        }
+            if (!algoritam.algoritamZavrsen.value!!) {
+                Toast.makeText(
+                    requireContext(),
+                    "Algoritam prvo mora pronaći put!",
+                    Toast.LENGTH_LONG
+                ).show()
 
+            } else {
+                var l = ListaGradova(algoritam.najkraciPut.value!!)
+                it.findNavController()
+                    .navigate(NajkraciPutFragmentDirections.actionNajkraciPutFragmentToPrikaziPut(l))
+
+            }
+        }
         binding.racunaj.setOnClickListener {
             algoritam.najkraciPutFunkcija()
         }
