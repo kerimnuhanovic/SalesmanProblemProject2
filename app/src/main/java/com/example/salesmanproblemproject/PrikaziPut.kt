@@ -45,7 +45,7 @@ class PrikaziPut : Fragment() {
             }
             it.addMarker(
                 MarkerOptions().position(LatLng(gradovi[0].latituda, gradovi[0].longituda))
-                    .title("Početni")
+                    .title(gradovi[0].grad)
             )
 
             it.moveCamera(

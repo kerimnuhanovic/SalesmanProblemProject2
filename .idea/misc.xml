@@ -4,20 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout-land/fragment_grad_detalji.xml" value="0.2520833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_dodaj_grad.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_grad_detalji.xml" value="0.2" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_lista_gradova.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_najkraci_put.xml" value="0.264" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_o_aplikaciji.xml" value="0.264" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_prikaz_grada.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_prikazi_put.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_lista_gradova.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_najkraci_put.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/fragment_title.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/grad_item.xml" value="0.264" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/layout/sadrzaj_headera.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/menu/nav_header_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SalesmanProblemProject/app/src/main/res/menu/sharing_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout-land/fragment_grad_detalji.xml" value="0.21516754850088182" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/fragment_dodaj_grad.xml" value="0.1" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/fragment_grad_detalji.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/fragment_lista_gradova.xml" value="0.1" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/fragment_najkraci_put.xml" value="0.10192147034252297" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/fragment_o_aplikaciji.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/fragment_prikaz_grada.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/grad_item.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/layout/sadrzaj_headera.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/menu/nav_header_menu.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/XY/Documents/GitHub/SalesmanProblemProject2/app/src/main/res/menu/sharing_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
